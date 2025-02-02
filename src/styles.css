@@ -86,6 +86,7 @@
   --ease-smooth: cubic-bezier(0.5, 0, 0.15, 1);
   --ease-decelerate: cubic-bezier(0, 0, 0.15, 1);
   --ease-accelerate: cubic-bezier(0.5, 0, 1, 1);
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
 }
 
 @layer {
