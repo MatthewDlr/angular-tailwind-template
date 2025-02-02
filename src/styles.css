@@ -125,11 +125,9 @@
   h6 {
     @apply font-satoshi text-base font-[400] text-gray-900 antialiased;
   }
-}
 
-@components {
   .btn {
-    @apply rounded-md px-3 py-2 text-sm font-semibold transition-all duration-300 active:scale-95;
+    @apply ease-smooth rounded-md px-3 py-2 font-semibold duration-300 hover:bg-gray-50 active:scale-95;
   }
 
   .input {
