@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/forms';
 
@@ -81,6 +81,11 @@
   --color-green-950: #022c22;
 
   --font-satoshi: Satoshi, system-ui, sans-serif;
+
+  --ease-in-out: cubic-bezier(0.45, 0, 0.6, 1);
+  --ease-smooth: cubic-bezier(0.5, 0, 0.15, 1);
+  --ease-decelerate: cubic-bezier(0, 0, 0.15, 1);
+  --ease-accelerate: cubic-bezier(0.5, 0, 1, 1);
 }
 
 /*
@@ -101,7 +106,21 @@
   }
 }
 
-p, h1, h2, h3, h4, h5, h6, span, a, input, button, label, select, option, textarea {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+input,
+button,
+label,
+select,
+option,
+textarea {
   @apply font-satoshi;
 }
 
