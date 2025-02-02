@@ -88,40 +88,80 @@
   --ease-accelerate: cubic-bezier(0.5, 0, 1, 1);
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+@layer {
+  p,
+  span,
+  a,
+  input,
+  button,
+  label,
+  select,
+  option,
+  textarea {
+    @apply font-satoshi antialiased;
+  }
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+  h1 {
+    @apply font-satoshi text-4xl font-[900] text-gray-900 antialiased;
+  }
+
+  h2 {
+    @apply font-satoshi text-3xl font-[800] text-gray-900 antialiased;
+  }
+
+  h3 {
+    @apply font-satoshi text-2xl font-[700] text-gray-900 antialiased;
+  }
+
+  h4 {
+    @apply font-satoshi text-xl font-[600] text-gray-900 antialiased;
+  }
+
+  h5 {
+    @apply font-satoshi text-lg font-[500] text-gray-900 antialiased;
+  }
+
+  h6 {
+    @apply font-satoshi text-base font-[400] text-gray-900 antialiased;
   }
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span,
-a,
-input,
-button,
-label,
-select,
-option,
-textarea {
-  @apply font-satoshi;
+@components {
+  .btn {
+    @apply rounded-md px-3 py-2 text-sm font-semibold transition-all duration-300 active:scale-95;
+  }
+
+  .input {
+    @apply block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 ring-1 ring-gray-300 duration-300 placeholder:text-gray-400 hover:bg-gray-300/15 focus:rounded-3xl focus:ring-2;
+  }
+
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .grid {
+    @apply grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+  }
+
+  .card {
+    @apply overflow-hidden rounded-lg bg-white shadow-md;
+  }
+
+  .card-image {
+    @apply h-48 w-full object-cover object-center;
+  }
+
+  .card-content {
+    @apply p-4;
+  }
+
+  .card-title {
+    @apply text-lg font-semibold text-gray-900;
+  }
+
+  .card-description {
+    @apply text-sm text-gray-500;
+  }
 }
 
 @font-face {
@@ -138,12 +178,4 @@ textarea {
   font-weight: 300 900;
   font-display: swap;
   font-style: italic;
-}
-
-.btn {
-  @apply rounded-md px-3 py-2 text-sm font-semibold transition-all duration-300 active:scale-95;
-}
-
-.input {
-  @apply block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 ring-1 ring-gray-300 duration-300 placeholder:text-gray-400 hover:bg-gray-300/15 focus:rounded-3xl focus:ring-2;
 }
