@@ -4,6 +4,7 @@
 # Presentation
 
 ## Stack 
+- Node : `v22.14.0 lts`
 - Package Manager: `pnpm@10.4.0`
 - Framework: `Angular@19.1.6 with zoneless, ssr, and hmr enabled`
 - Styling: `TailwindCSS@4.0.6`
@@ -22,6 +23,9 @@
 
 # Dev
 ## Installation
+> [!IMPORTANT]
+> Node version must be `v22.11.0` or higher.
+
 If pnpm is not installed, simply run:
 ```bash
 npm install -g pnpm@10.4.0
