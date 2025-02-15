@@ -1,10 +1,38 @@
-### TODO
-Replace every instance of `{{app-name}}` with the name of the project.
+> [!TIP]
+> Replace every instance of `{{app-name}}` with the name of the project.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+# Presentation
+
+## Stack 
+- Package Manager: `pnpm@10.4.0`
+- Framework: `Angular@19.1.6 with zoneless, ssr, and hmr enabled`
+- Styling: `TailwindCSS@4.0.6`
+- Linter: `eslint@9.20.1`
+- Formatter: `prettier@3.5.1`
+  
+## Features
+- [x] Angular Core v19
+- [x] Angular [Zoneless enabled](https://angular.dev/guide/experimental/zoneless) 
+- [x] Angular [SSR enabled](https://angular.dev/guide/ssr)
+- [x] Angular [HMR enabled](https://angular.dev/tools/cli/build-system-migration#hot-module-replacement)
+- [x] Angular [Icons](https://ng-icons.github.io/ng-icons/#/browse-icons) with `Lucide` pre-installed and global config (see `app.config.ts`)
+- [x] TailwindCSS 4.0 with pre-configured styles (typography, colors, motions)
+- [x] Eslint & Prettier with pre-configured rules
+- [x] VSCode recommended extensions
+
+# Dev
+## Installation
+If pnpm is not installed, simply run:
+```bash
+npm install -g pnpm@10.4.0
+```
+
+Then, install the dependencies:
+```bash
+pnpm install
+```
 
 ## Development server
-
 To start a local development server, run:
 
 ```bash

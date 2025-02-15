@@ -12,6 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
 
     // Define the default configuration for icons
+    // Can be overridden by providing a different configuration in a component
     provideNgIconsConfig({
       size: "1.5em",
       strokeWidth: 2,
