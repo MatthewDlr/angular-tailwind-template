@@ -126,41 +126,14 @@
     @apply font-satoshi text-base font-[400] text-gray-950 antialiased;
   }
 
-  .btn {
+  button {
     @apply ease-smooth rounded-md px-3 py-2 font-semibold duration-300 hover:bg-gray-50 active:scale-95;
   }
 
-  .input {
+  input {
     @apply block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 ring-1 ring-gray-300 duration-300 placeholder:text-gray-400 hover:bg-gray-300/15 focus:rounded-3xl focus:ring-2;
   }
 
-  .container {
-    @apply mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  .grid {
-    @apply grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
-  }
-
-  .card {
-    @apply overflow-hidden rounded-lg bg-white shadow-md;
-  }
-
-  .card-image {
-    @apply h-48 w-full object-cover object-center;
-  }
-
-  .card-content {
-    @apply p-4;
-  }
-
-  .card-title {
-    @apply text-lg font-semibold text-gray-900;
-  }
-
-  .card-description {
-    @apply text-sm text-gray-500;
-  }
 }
 
 @font-face {
