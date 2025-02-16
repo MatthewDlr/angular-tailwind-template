@@ -8,17 +8,17 @@
   --color-white: #ffffff;
   --color-black: #030712;
 
-  --color-gray-50: oklch(0.9123 0.0017 247.7386);
-  --color-gray-100: oklch(0.8232 0.003 264.6655);
-  --color-gray-200: oklch(0.7349 0.0044 271.4706);
-  --color-gray-300: oklch(0.6471 0.006 275.0103);
-  --color-gray-400: oklch(0.5597 0.0077 277.1323);
-  --color-gray-500: oklch(0.4711 0.0084 268.4998);
-  --color-gray-600: oklch(0.3832 0.0105 271.1596);
-  --color-gray-700: oklch(0.2966 0.0117 264.3894);
-  --color-gray-800: oklch(0.2086 0.0128 264.2505);
-  --color-gray-900: oklch(0.1296 0.0274 261.6914);
-  --color-gray-950: oklch(0.0964 0.02 256.722);
+  --color-gray-50: oklch(0.95 0 0);
+  --color-gray-100: oklch(0.85 0 0);
+  --color-gray-200: oklch(0.75 0 0);
+  --color-gray-300: oklch(0.65 0 0);
+  --color-gray-400: oklch(0.55 0 0);
+  --color-gray-500: oklch(0.50 0 0);
+  --color-gray-600: oklch(0.45 0 0);
+  --color-gray-700: oklch(0.40 0 0);
+  --color-gray-800: oklch(0.35 0 0);
+  --color-gray-900: oklch(0.25 0 0);
+  --color-gray-950: oklch(0.15 0 0);
 
   --color-blue-50: oklch(0.9497 0.0206 248.0324);
   --color-blue-100: oklch(0.9016 0.0413 246.0233);
@@ -127,7 +127,7 @@
   }
 
   .btn {
-    @apply rounded-md px-3 py-2 font-semibold duration-300 ease-smooth hover:bg-gray-50 active:scale-95;
+    @apply ease-smooth rounded-md px-3 py-2 font-semibold duration-300 hover:bg-gray-50 active:scale-95;
   }
 
   .input {
