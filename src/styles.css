@@ -2,6 +2,7 @@
 
 @plugin '@tailwindcss/forms';
 
+// Color generated with https://tailwind-palette-generator.mdelarue.dev
 @theme {
   --color-*: initial;
   --color-transparent: transparent;
