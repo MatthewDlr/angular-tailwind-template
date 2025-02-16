@@ -19,6 +19,7 @@
 - [x] Angular [Icons](https://ng-icons.github.io/ng-icons/#/browse-icons) with `Lucide` pre-installed and global config (see `app.config.ts`)
 - [x] TailwindCSS 4.0 with pre-configured styles (typography, colors, motions)
 - [x] Eslint & Prettier with pre-configured rules
+- [x] Satoshi variable font as default font
 - [x] VSCode recommended extensions
 
 # Dev
