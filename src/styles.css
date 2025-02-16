@@ -2,7 +2,7 @@
 
 @plugin '@tailwindcss/forms';
 
-// Color generated with https://tailwind-palette-generator.mdelarue.dev
+/** Color generated with https://tailwind-palette-generator.mdelarue.dev */
 @theme {
   --color-*: initial;
   --color-transparent: transparent;
@@ -14,9 +14,9 @@
   --color-gray-200: oklch(0.75 0 0);
   --color-gray-300: oklch(0.65 0 0);
   --color-gray-400: oklch(0.55 0 0);
-  --color-gray-500: oklch(0.50 0 0);
+  --color-gray-500: oklch(0.5 0 0);
   --color-gray-600: oklch(0.45 0 0);
-  --color-gray-700: oklch(0.40 0 0);
+  --color-gray-700: oklch(0.4 0 0);
   --color-gray-800: oklch(0.35 0 0);
   --color-gray-900: oklch(0.25 0 0);
   --color-gray-950: oklch(0.15 0 0);
@@ -128,13 +128,12 @@
   }
 
   button {
-    @apply ease-smooth rounded-md px-3 py-2 font-semibold duration-300 hover:bg-gray-50 active:scale-95;
+    @apply rounded-md px-3 py-2 font-semibold duration-300 ease-smooth hover:bg-gray-50 active:scale-95;
   }
 
   input {
     @apply block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 ring-1 ring-gray-300 duration-300 placeholder:text-gray-400 hover:bg-gray-300/15 focus:rounded-3xl focus:ring-2;
   }
-
 }
 
 @font-face {
