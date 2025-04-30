@@ -6,7 +6,7 @@
 ## Stack 
 - Node : `v22.14.0 lts`
 - Package Manager: `pnpm@10.4.0`
-- Framework: `Angular@19.1.6 with zoneless, ssr, and hmr enabled`
+- Framework: `Angular@19.2.8 with zoneless, ssr, and hmr enabled`
 - Styling: `TailwindCSS@4.0.6`
 - Linter: `eslint@9.20.1`
 - Formatter: `prettier@3.5.1`
