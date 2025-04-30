@@ -17,7 +17,7 @@
 - [x] Angular [SSR enabled](https://angular.dev/guide/ssr)
 - [x] Angular [HMR enabled](https://angular.dev/tools/cli/build-system-migration#hot-module-replacement)
 - [x] Angular [Icons](https://ng-icons.github.io/ng-icons/#/browse-icons) with `Lucide` pre-installed and global config (see `app.config.ts`)
-- [x] TailwindCSS 4.0 with pre-configured styles (typography, colors, motions)
+- [x] TailwindCSS 4.1 with pre-configured styles (typography, colors, motions)
 - [x] Eslint & Prettier with pre-configured rules
 - [x] Satoshi variable font as default font
 - [x] VSCode recommended extensions
