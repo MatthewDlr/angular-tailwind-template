@@ -4,15 +4,15 @@
 # Presentation
 
 ## Stack 
-- Node : `v22.14.0 lts`
+- Node : `v24.0.0 lts`
 - Package Manager: `pnpm@10.4.0`
-- Framework: `Angular@19.2.8 with zoneless, ssr, and hmr enabled`
-- Styling: `TailwindCSS@4.0.6`
-- Linter: `eslint@9.20.1`
-- Formatter: `prettier@3.5.1`
+- Framework: `Angular@20.0.0 with zoneless, ssr, and hmr enabled`
+- Styling: `TailwindCSS@4.1.8`
+- Linter: `eslint@9.28.0`
+- Formatter: `prettier@3.5.3`
   
 ## Features
-- [x] Angular Core v19
+- [x] Angular Core v20
 - [x] Angular [Zoneless enabled](https://angular.dev/guide/experimental/zoneless) 
 - [x] Angular [SSR enabled](https://angular.dev/guide/ssr)
 - [x] Angular [HMR enabled](https://angular.dev/tools/cli/build-system-migration#hot-module-replacement)
@@ -25,7 +25,8 @@
 # Dev
 ## Installation
 > [!IMPORTANT]
-> Node version must be `v22.11.0` or higher.
+> Node version must be `v24.0.0`. <br>
+> Learn more at https://angular.dev/reference/versions
 
 If pnpm is not installed, simply run:
 ```bash
