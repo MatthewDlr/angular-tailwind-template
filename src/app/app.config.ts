@@ -1,15 +1,16 @@
-import { ApplicationConfig, provideExperimentalZonelessChangeDetection } from "@angular/core";
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from "@angular/core";
 import { provideRouter } from "@angular/router";
 
 import { provideClientHydration, withEventReplay } from "@angular/platform-browser";
-import { routes } from "./app.routes";
 import { provideNgIconsConfig } from "@ng-icons/core";
+import { routes } from "./app.routes";
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideExperimentalZonelessChangeDetection(),
+    provideZonelessChangeDetection(),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
+    provideBrowserGlobalErrorListeners(),
 
     // Define the default configuration for icons
     // Can be overridden by providing a different configuration in a component
