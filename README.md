@@ -7,10 +7,10 @@
 
 - Node : `v24.0.0 lts`
 - Package Manager: `pnpm@10.4.0`
-- Framework: `Angular@20.0.0 with zoneless, ssr, and hmr enabled`
-- Styling: `TailwindCSS@4.1.8`
-- Linter: `eslint@9.28.0`
-- Formatter: `prettier@3.5.3`
+- Framework: `Angular@20.0.5 with zoneless, ssr, and hmr enabled`
+- Styling: `TailwindCSS@4.1.11`
+- Linter: `eslint@9.30.0`
+- Formatter: `prettier@3.6.2`
 
 ## Features
 
