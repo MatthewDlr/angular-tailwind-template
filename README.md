@@ -6,8 +6,8 @@
 ## Stack
 
 - Node : `v24.0.0 lts`
-- Package Manager: `pnpm@10.4.0`
-- Framework: `Angular@20.0.5 with zoneless, ssr, and hmr enabled`
+- Package Manager: `pnpm@10.13.1`
+- Framework: `Angular@20.1.0 with zoneless, ssr, and hmr enabled`
 - Styling: `TailwindCSS@4.1.11`
 - Linter: `eslint@9.30.0`
 - Formatter: `prettier@3.6.2`
@@ -35,7 +35,7 @@
 If pnpm is not installed, simply run:
 
 ```bash
-npm install -g pnpm@10.4.0
+npm install -g pnpm@10.13.1
 ```
 
 Then, install the dependencies:
