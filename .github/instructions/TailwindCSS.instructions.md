@@ -1,8 +1,8 @@
 ---
-applyTo: '**/*.html'
+applyTo: '**/*.html, **/*.css, **/*.scss'
 ---
 
-If this file use TailwindCSS or if the user want to, here some guidelines to follow:
+# TailwindCSS Development Instructions
 
 ### Don't Use the removed Utilities in v4
 - `text-opacity-*` → Use `text-{color}/{opacity}` instead
@@ -13,16 +13,14 @@ If this file use TailwindCSS or if the user want to, here some guidelines to fol
 - `decoration-slice` → Use `box-decoration-slice`
 
 ### Don't Use These Deprecated Patterns
-- ❌ `@tailwind base; @tailwind components; @tailwind utilities;`
 - ❌ `text-opacity-50` → Use `text-white/50` instead
 - ❌ `bg-opacity-25` → Use `bg-blue-500/25` instead
 - ❌ `border` without color (now uses currentColor, not gray-200)
 - ❌ `ring` without explicit width (now 1px, was 3px)
 - ❌ `@layer utilities` → Use `@utility` instead
-- ❌ JavaScript config for new projects → Use CSS `@theme`
+
 
 ### Modern v4 Alternatives
-- ✅ `@import "tailwindcss";`
 - ✅ `text-white/50` for semi-transparent text
 - ✅ `bg-blue-500/25` for semi-transparent backgrounds
 - ✅ `border border-gray-200` for explicit border color

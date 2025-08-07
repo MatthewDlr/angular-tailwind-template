@@ -5,11 +5,11 @@
 
 ## Stack
 
-- Node : `v24.0.0 lts`
-- Package Manager: `pnpm@10.13.1`
-- Framework: `Angular@20.1.0 with zoneless, ssr, and hmr enabled`
+- Node : `24.x`
+- Package Manager: `pnpm@10.14.0`
+- Framework: `Angular@20.1.6 with zoneless, ssr, and hmr enabled`
 - Styling: `TailwindCSS@4.1.11`
-- Linter: `eslint@9.30.0`
+- Linter: `eslint@9.32.0`
 - Formatter: `prettier@3.6.2`
 
 ## Features
@@ -23,19 +23,20 @@
 - [x] Eslint & Prettier with pre-configured rules
 - [x] Satoshi variable font as default font
 - [x] VSCode recommended extensions
+- [x] Copilot instructions for generating clean and efficient code
 
 # Dev
 
 ## Installation
 
 > [!IMPORTANT]
-> Node version must be `v24.0.0`. <br>
+> Node version must be `v24.x`  <br>
 > Learn more at https://angular.dev/reference/versions
 
 If pnpm is not installed, simply run:
 
 ```bash
-npm install -g pnpm@10.13.1
+npm install -g pnpm@10.14.0
 ```
 
 Then, install the dependencies:

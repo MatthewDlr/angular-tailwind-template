@@ -5,11 +5,11 @@ applyTo: "**/*.ts, **/*.tsx}"
 This guidelines is for writing TypeScript code in a consistent and maintainable way. You must follow them at all times.
 
 ## To absolutely follow at all times
-- Never use type assertions. Eg: `const x = value as Type` is forbidden. The only exception is `as const`
-- Never use `any` type.
-- Never use the not null assertion operator (`!`). Prefers the optional chaining operator (`?.`) or explicit checks.
+- NEVER use type assertions. Eg: `const x = value as Type` is forbidden. The only exception is `as const`
+- NEVER use `any` type.
+- NEVER use the not null assertion operator (`!`). Prefers the optional chaining operator (`?.`) or explicit checks.
 - Use type narrowing to check for not null or undefined values, such as `if (value !== null && value !== undefined)`.
-- Use `===`instead of `==`
+- Use `===`instead of `==`.
 - Define return types explicitly for functions.
 
 ## General Guidelines
