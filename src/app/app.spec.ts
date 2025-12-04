@@ -17,8 +17,6 @@ describe('App', () => {
   it('should render title', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
-    expect(fixture.nativeElement.querySelector('h1')?.textContent).toContain(
-      'Hello, angular-tailwind-template',
-    );
+    expect(fixture.nativeElement.querySelector('h1')?.textContent).toContain('Hello, app-name');
   });
 });

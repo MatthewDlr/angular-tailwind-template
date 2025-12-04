@@ -75,7 +75,7 @@
     "oxc/uninvoked-array-callback": "warn",
     "typescript/no-unsafe-assignment": "error",
     "typescript/no-explicit-any": "error",
-    "typescript/no-magic-numbers": "warn",
+    "typescript/no-magic-numbers": ["warn", { "ignoreNumericLiteralTypes": true, "ignoreArrayIndexes": true, "ignoreEnums": true, "ignoreDefaultValues": true, "ignoreReadonlyClassProperties": true, "ignoreTypeIndexes": true, "ignore": [0, 1, -1 ] }],
     "typescript/await-thenable": "warn",
     "typescript/no-array-delete": "warn",
     "typescript/no-base-to-string": "warn",

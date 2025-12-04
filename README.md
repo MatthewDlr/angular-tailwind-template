@@ -1,6 +1,49 @@
-# AngularTailwindTemplate
+> [!TIP]
+> Replace every instance of `app-name` with the name of the project.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
+# Presentation
+
+## Stack
+
+- Node : `24.x`
+- Package Manager: `pnpm@10.24.0`
+- Framework: `Angular@21.0.3 with zoneless, ssr, and hmr enabled`
+- Styling: `TailwindCSS@4.1`
+- Linter: `Oxlint`
+- Formatter: `Oxfmt`,
+
+## Features
+
+- [x] Angular Core v21
+- [x] Angular [Zoneless enabled](https://angular.dev/guide/experimental/zoneless), with `OnPush` detection strategy by default
+- [x] Angular [SSR enabled](https://angular.dev/guide/ssr)
+- [x] Angular [HMR enabled](https://angular.dev/tools/cli/build-system-migration#hot-module-replacement)
+- [x] TailwindCSS 4.1 with pre-configured styles (typography, colors, motions)
+- [x] Oxlint to lint code almost 100x faster than Eslint with [Type-Aware Linting](https://oxc.rs/docs/guide/usage/linter/type-aware.html)
+- [x] Oxfmt to format code 30× faster than Prettier (Prettier extension might be needed to format .html files)
+- [x] Satoshi variable font as default font
+- [x] VSCode recommended extensions
+- [x] GenAI ready with `Agent.md` file along with `.claude`, `.cursor` and `.gemini` folders for prompt storage
+
+# Dev
+
+## Installation
+
+> [!IMPORTANT]
+> Node version must be `v24.x` <br>
+> Learn more at <https://angular.dev/reference/versions>
+
+If pnpm is not installed, simply run:
+
+```bash
+npm install -g pnpm@10.24.0
+```
+
+Then, install the dependencies:
+
+```bash
+pnpm install
+```
 
 ## Development server
 
@@ -8,6 +51,12 @@ To start a local development server, run:
 
 ```bash
 ng serve
+```
+
+or
+
+```bash
+pnpm dev
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.

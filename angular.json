@@ -1,12 +1,20 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "changeDetection": "OnPush"
+      }
+    }
+  },
   "version": 1,
   "cli": {
-    "packageManager": "pnpm"
+    "packageManager": "pnpm",
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular-tailwind-template": {
+    "app-name": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -61,10 +69,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-tailwind-template:build:production"
+              "buildTarget": "app-name:build:production"
             },
             "development": {
-              "buildTarget": "angular-tailwind-template:build:development"
+              "buildTarget": "app-name:build:development"
             }
           },
           "defaultConfiguration": "development"
