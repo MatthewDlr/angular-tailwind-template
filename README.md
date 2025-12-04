@@ -1,42 +1,42 @@
 > [!TIP]
-> Replace every instance of `{{app-name}}` with the name of the project.
+> Replace every instance of `app-name` with the name of the project.
 
 # Presentation
 
 ## Stack
 
 - Node : `24.x`
-- Package Manager: `pnpm@10.14.0`
-- Framework: `Angular@20.1.6 with zoneless, ssr, and hmr enabled`
-- Styling: `TailwindCSS@4.1.11`
-- Linter: `eslint@9.32.0`
-- Formatter: `prettier@3.6.2`
+- Package Manager: `pnpm@10.24.0`
+- Framework: `Angular@21 with zoneless, ssr, and hmr enabled`
+- Styling: `TailwindCSS@4.1`
+- Linter: `Oxlint`
+- Formatter: `Oxfmt`,
 
 ## Features
 
-- [x] Angular Core v20
-- [x] Angular [Zoneless enabled](https://angular.dev/guide/experimental/zoneless), with `OnPush` detection strategy by default
-- [x] Angular [SSR enabled](https://angular.dev/guide/ssr)
+- [x] Angular Core v21
+- [x] Angular [Zoneless enabled](https://angular.dev/guide/zoneless), with `OnPush` detection strategy by default
+- [x] Angular [SSR enabled](https://angular.dev/guide/ssr) with [Incremental Hydration](https://angular.dev/guide/incremental-hydration)
 - [x] Angular [HMR enabled](https://angular.dev/tools/cli/build-system-migration#hot-module-replacement)
-- [x] Angular [Icons](https://ng-icons.github.io/ng-icons/#/browse-icons) with `Lucide` pre-installed and global config (see `app.config.ts`)
 - [x] TailwindCSS 4.1 with pre-configured styles (typography, colors, motions)
-- [x] Eslint & Prettier with pre-configured rules
+- [x] [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) to lint code almost 100x faster than Eslint with [Type-Aware Linting](https://oxc.rs/docs/guide/usage/linter/type-aware.html)
+- [x] [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) to format code 30× faster than Prettier (Prettier extension might be needed to format .html files)
 - [x] Satoshi variable font as default font
 - [x] VSCode recommended extensions
-- [x] Copilot instructions for generating clean and efficient code
+- [x] GenAI ready with `Agent.md` file along with `.claude`, `.cursor` and `.gemini` folders for prompt storage
 
 # Dev
 
 ## Installation
 
 > [!IMPORTANT]
-> Node version must be `v24.x`  <br>
-> Learn more at https://angular.dev/reference/versions
+> Node version must be `v24.x` <br>
+> Learn more at <https://angular.dev/reference/versions>
 
 If pnpm is not installed, simply run:
 
 ```bash
-npm install -g pnpm@10.14.0
+npm install -g pnpm@10.24.0
 ```
 
 Then, install the dependencies:
@@ -51,6 +51,12 @@ To start a local development server, run:
 
 ```bash
 ng serve
+```
+
+or
+
+```bash
+pnpm dev
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
@@ -69,6 +75,25 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
+## Linting
+
+To lint your code using Oxlint, run:
+
+```bash
+pnpm lint 
+```
+
+> [!WARNING]
+> Angular `ng lint` command will not work in this project
+
+## Formatting
+
+To format your code using Oxfmt, run:
+
+```bash
+pnpm format
+```
+
 ## Building
 
 To build the project run:
@@ -81,7 +106,7 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
 ```bash
 ng test

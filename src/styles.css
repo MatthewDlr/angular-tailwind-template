@@ -104,27 +104,27 @@
   }
 
   h1 {
-    @apply font-satoshi text-4xl font-[900] text-gray-950 antialiased;
+    @apply font-satoshi text-4xl font-black text-gray-950 antialiased;
   }
 
   h2 {
-    @apply font-satoshi text-3xl font-[800] text-gray-950 antialiased;
+    @apply font-satoshi text-3xl font-extrabold text-gray-950 antialiased;
   }
 
   h3 {
-    @apply font-satoshi text-2xl font-[700] text-gray-950 antialiased;
+    @apply font-satoshi text-2xl font-bold text-gray-950 antialiased;
   }
 
   h4 {
-    @apply font-satoshi text-xl font-[600] text-gray-950 antialiased;
+    @apply font-satoshi text-xl font-semibold text-gray-950 antialiased;
   }
 
   h5 {
-    @apply font-satoshi text-lg font-[500] text-gray-950 antialiased;
+    @apply font-satoshi text-lg font-medium text-gray-950 antialiased;
   }
 
   h6 {
-    @apply font-satoshi text-base font-[400] text-gray-950 antialiased;
+    @apply font-satoshi text-base font-normal text-gray-950 antialiased;
   }
 
   button {
@@ -138,7 +138,7 @@
 
 @font-face {
   font-family: "Satoshi-Variable";
-  src: url("../public/fonts/Satoshi-Variable.woff2") format("woff2");
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
   font-weight: 300 900;
   font-display: swap;
   font-style: normal;
@@ -146,7 +146,7 @@
 
 @font-face {
   font-family: "Satoshi-VariableItalic";
-  src: url("../public/fonts/Satoshi-VariableItalic.woff2") format("woff2");
+  src: url("/fonts/Satoshi-VariableItalic.woff2") format("woff2");
   font-weight: 300 900;
   font-display: swap;
   font-style: italic;

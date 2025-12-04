@@ -3,14 +3,11 @@
   "recommendations": [
     "angular.ng-template",
     "streetsidesoftware.code-spell-checker",
-    "mikestead.dotenv",
-    "dbaeumer.vscode-eslint",
-    "pkief.material-icon-theme",
+    "cardinal90.multi-cursor-case-preserve",
+    "oxc.oxc-vscode",
     "csstools.postcss",
-    "christian-kohler.path-intellisense",
-    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
     "tomwhite007.rename-angular-component",
-    "bradlc.vscode-tailwindcss",
-    "naumovs.color-highlight"
+    "bradlc.vscode-tailwindcss"
   ]
 }
