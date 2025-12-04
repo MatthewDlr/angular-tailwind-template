@@ -1,49 +1,6 @@
-> [!TIP]
-> Replace every instance of `{{app-name}}` with the name of the project.
+# AngularTailwindTemplate
 
-# Presentation
-
-## Stack
-
-- Node : `24.x`
-- Package Manager: `pnpm@10.14.0`
-- Framework: `Angular@20.1.6 with zoneless, ssr, and hmr enabled`
-- Styling: `TailwindCSS@4.1.11`
-- Linter: `eslint@9.32.0`
-- Formatter: `prettier@3.6.2`
-
-## Features
-
-- [x] Angular Core v20
-- [x] Angular [Zoneless enabled](https://angular.dev/guide/experimental/zoneless), with `OnPush` detection strategy by default
-- [x] Angular [SSR enabled](https://angular.dev/guide/ssr)
-- [x] Angular [HMR enabled](https://angular.dev/tools/cli/build-system-migration#hot-module-replacement)
-- [x] Angular [Icons](https://ng-icons.github.io/ng-icons/#/browse-icons) with `Lucide` pre-installed and global config (see `app.config.ts`)
-- [x] TailwindCSS 4.1 with pre-configured styles (typography, colors, motions)
-- [x] Eslint & Prettier with pre-configured rules
-- [x] Satoshi variable font as default font
-- [x] VSCode recommended extensions
-- [x] Copilot instructions for generating clean and efficient code
-
-# Dev
-
-## Installation
-
-> [!IMPORTANT]
-> Node version must be `v24.x`  <br>
-> Learn more at https://angular.dev/reference/versions
-
-If pnpm is not installed, simply run:
-
-```bash
-npm install -g pnpm@10.14.0
-```
-
-Then, install the dependencies:
-
-```bash
-pnpm install
-```
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
 
 ## Development server
 
@@ -81,7 +38,7 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
 ```bash
 ng test
