@@ -1,9 +1,4 @@
-import {
-  AngularNodeAppEngine,
-  createNodeRequestHandler,
-  isMainModule,
-  writeResponseToNodeResponse,
-} from "@angular/ssr/node";
+import { AngularNodeAppEngine, createNodeRequestHandler, isMainModule, writeResponseToNodeResponse } from "@angular/ssr/node";
 import express from "express";
 import { join } from "node:path";
 
@@ -11,6 +6,7 @@ const browserDistFolder = join(import.meta.dirname, "../browser");
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
+const DEFAULT_PORT = 4000;
 
 /**
  * Example Express Rest API endpoints can be defined here.
@@ -50,7 +46,7 @@ app.use((req, res, next) => {
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
 if (isMainModule(import.meta.url) || process.env["pm_id"]) {
-  const port = process.env["PORT"] || 4000;
+  const port = process.env["PORT"] || DEFAULT_PORT;
   app.listen(port, (error) => {
     if (error) {
       throw error;
