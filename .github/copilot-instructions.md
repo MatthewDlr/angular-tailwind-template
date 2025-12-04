@@ -54,3 +54,25 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
+
+## Typescript
+
+- NEVER use type assertions. Eg: `const x = value as Type` is forbidden. The only exception is `as const`.
+- NEVER use `any` type.
+- NEVER use the not null assertion operator (`!`). Prefers the optional chaining operator (`?.`) or explicit checks.
+- Use type narrowing to check for not null or undefined values, such as `if (value !== null && value !== undefined)`.
+- Use `===` instead of `==`.
+- Define return types explicitly for functions.
+- Use `const` for variables that are not reassigned, and `let` for those that are.
+- When working with union types, use `never` to ensure that if new cases are added, TypeScript will throw an error if they are not handled.
+- Avoid type checking with `instanceof`. Always prefer to specify types of variables, parameters and return values to leverage the full power of TypeScript features.
+- Prefer immutability with `readonly`.
+
+## TailwindCSS V4 Best Practices
+
+- `text-opacity-*` → Use `text-{color}/{opacity}` instead
+- `bg-opacity-*` → Use `bg-{color}/{opacity}` instead
+- `border-opacity-*` → Use `border-{color}/{opacity}` instead
+- `flex-grow-*` → Use `grow-*`
+- `flex-shrink-*` → Use `shrink-*`
+- `decoration-slice` → Use `box-decoration-slice`
