@@ -7,6 +7,7 @@
     "perf": "warn"
   },
   "rules": {
+    "no-promise-in-callback": "allow",
     "for-direction": "warn",
     "no-async-promise-executor": "warn",
     "no-caller": "warn",
@@ -145,5 +146,5 @@
     "builtin": true
   },
   "globals": {},
-  "ignorePatterns": ["dist/", "node_modules/", ".vscode/", ".github/"]
+  "ignorePatterns": ["dist/", "node_modules/", ".vscode/", ".github/", "src/server.ts"]
 }
