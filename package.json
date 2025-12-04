@@ -4,7 +4,7 @@
   "packageManager": "pnpm@10.24.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -32,7 +32,7 @@
     "@angular/compiler-cli": "^21.0.3",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/express": "^5.0.6",
-    "@types/node": "^20.19.25",
+    "@types/node": "^24.10.1",
     "@vitest/eslint-plugin": "^1.5.1",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-promise": "^7.2.1",
