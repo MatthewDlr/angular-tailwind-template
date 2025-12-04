@@ -1,7 +1,11 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["unicorn", "typescript", "oxc"],
-  "categories": {},
+  "plugins": ["unicorn", "typescript", "oxc", "promise", "import", "vitest"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
   "rules": {
     "for-direction": "warn",
     "no-async-promise-executor": "warn",
