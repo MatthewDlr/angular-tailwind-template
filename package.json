@@ -6,6 +6,7 @@
     "ng": "ng",
     "dev": "ng serve",
     "build": "ng build",
+    "build:staging": "ng build --configuration staging",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "oxlint --type-aware --type-check",
