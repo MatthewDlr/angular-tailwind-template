@@ -1,12 +1,24 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["unicorn", "typescript", "oxc", "promise", "vitest"],
+  "plugins": ["unicorn", "typescript", "oxc", "promise", "import", "vitest"],
   "categories": {
     "correctness": "error",
     "suspicious": "warn",
     "perf": "warn"
   },
+  "experimentalSortPackageJson": {
+    "enabled": true
+  },
+  "experimentalTailwindcss": {
+    "enabled": true,
+    "attributes": ["class", "[class]"]
+  },
+  "experimentalSortImports": {
+    "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
+    "newlinesBetween": true
+  },
   "rules": {
+    "import/no-cycle": ["error", { "maxDepth": 3 }],
     "no-promise-in-callback": "allow",
     "for-direction": "warn",
     "no-async-promise-executor": "warn",
@@ -75,7 +87,18 @@
     "oxc/uninvoked-array-callback": "warn",
     "typescript/no-unsafe-assignment": "error",
     "typescript/no-explicit-any": "error",
-    "typescript/no-magic-numbers": ["warn", { "ignoreNumericLiteralTypes": true, "ignoreArrayIndexes": true, "ignoreEnums": true, "ignoreDefaultValues": true, "ignoreReadonlyClassProperties": true, "ignoreTypeIndexes": true, "ignore": [0, 1, -1 ] }],
+    "typescript/no-magic-numbers": [
+      "warn",
+      {
+        "ignoreNumericLiteralTypes": true,
+        "ignoreArrayIndexes": true,
+        "ignoreEnums": true,
+        "ignoreDefaultValues": true,
+        "ignoreReadonlyClassProperties": true,
+        "ignoreTypeIndexes": true,
+        "ignore": [0, 1, -1]
+      }
+    ],
     "typescript/await-thenable": "warn",
     "typescript/no-array-delete": "warn",
     "typescript/no-base-to-string": "warn",

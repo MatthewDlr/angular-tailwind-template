@@ -8,8 +8,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "oxlint --type-aware",
+    "lint": "oxlint --type-aware --type-check",
+    "lint:fix": "oxlint --type-aware --type-check --fix",
     "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "serve:ssr:app-name": "node dist/app-name/server/server.mjs"
   },
   "private": true,
