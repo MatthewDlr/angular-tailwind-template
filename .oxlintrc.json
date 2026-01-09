@@ -6,17 +6,6 @@
     "suspicious": "warn",
     "perf": "warn"
   },
-  "experimentalSortPackageJson": {
-    "enabled": true
-  },
-  "experimentalTailwindcss": {
-    "enabled": true,
-    "attributes": ["class", "[class]"]
-  },
-  "experimentalSortImports": {
-    "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
-    "newlinesBetween": true
-  },
   "rules": {
     "import/no-cycle": ["error", { "maxDepth": 3 }],
     "no-promise-in-callback": "allow",
@@ -87,6 +76,7 @@
     "oxc/uninvoked-array-callback": "warn",
     "typescript/no-unsafe-assignment": "error",
     "typescript/no-explicit-any": "error",
+    "typescript/switch-exhaustiveness-check": "error",
     "typescript/no-magic-numbers": [
       "warn",
       {
