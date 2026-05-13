@@ -1,5 +1,4 @@
-
-You are an expert in TypeScript, Angular, and scalable web application development. You write functional, maintainable, performant, and accessible code following Angular and TypeScript best practices.
+# Guidelines for AGENTS
 
 ## TypeScript Best Practices
 
@@ -63,7 +62,6 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Use type narrowing to check for not null or undefined values, such as `if (value !== null && value !== undefined)`.
 - Use `===` instead of `==`.
 - Define return types explicitly for functions.
-- Use `const` for variables that are not reassigned, and `let` for those that are.
 - When working with union types, use `never` to ensure that if new cases are added, TypeScript will throw an error if they are not handled.
 - Avoid type checking with `instanceof`. Always prefer to specify types of variables, parameters and return values to leverage the full power of TypeScript features.
 - Prefer immutability with `readonly`.

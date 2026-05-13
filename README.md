@@ -6,7 +6,7 @@
 ## Stack
 
 - Node : `24.x`
-- Package Manager: `pnpm@10.24.0`
+- Package Manager: `pnpm@11`
 - Framework: `Angular@21 with zoneless, ssr, and hmr enabled`
 - Styling: `TailwindCSS@4.1`
 - Linter: `Oxlint`
