@@ -126,6 +126,12 @@ To run the suite once and get machine-readable output, run:
 pnpm test:agent
 ```
 
+To run the suite with coverage, run:
+
+```bash
+pnpm test:coverage
+```
+
 ## Agentic Development
 
 Every check has a non-interactive, machine-friendly entry point, so an agent does not have to parse a watch UI or a human report:

@@ -19,10 +19,13 @@
     "serve:ssr:app-name": "node dist/app-name/server/server.mjs",
     "test": "ng test",
     "test:agent": "ng test --no-watch --reporters=agent",
+    "test:coverage": "ng test --no-watch --coverage",
     "test:ui": "ng test --ui",
     "watch": "ng build --watch --configuration development"
   },
   "dependencies": {
+    "@angular/aria": "^22.2.6",
+    "@angular/cdk": "^22.2.6",
     "@angular/common": "^22.2.5",
     "@angular/compiler": "^22.2.5",
     "@angular/core": "^22.2.5",
@@ -43,6 +46,7 @@
     "@tailwindcss/postcss": "4.3.4",
     "@types/express": "^5.0.6",
     "@types/node": "^24.19.2",
+    "@vitest/coverage-v8": "^5.1.0",
     "@vitest/ui": "^5.1.0",
     "jsdom": "^27.4.0",
     "oxfmt": "~0.76.0",
