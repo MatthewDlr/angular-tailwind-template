@@ -6,14 +6,24 @@ import {
   withEventReplay,
   withIncrementalHydration,
 } from "@angular/platform-browser";
-import { provideRouter } from "@angular/router";
+import {
+  provideRouter,
+  withComponentInputBinding,
+  withInMemoryScrolling,
+  withViewTransitions,
+} from "@angular/router";
 
 import { routes } from "./app.routes";
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(
+      routes,
+      withComponentInputBinding(),
+      withViewTransitions(),
+      withInMemoryScrolling({ scrollPositionRestoration: "enabled" }),
+    ),
     provideClientHydration(withEventReplay(), withIncrementalHydration()),
   ],
 };
