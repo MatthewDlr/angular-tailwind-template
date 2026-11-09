@@ -6,7 +6,7 @@
 ## Stack
 
 - Node: `24.x`
-- Package Manager: `pnpm@11`
+- Package Manager: `pnpm@12`
 - Framework: `Angular@22 with zoneless, SSR, and HMR enabled`
 - Styling: `TailwindCSS@4`
 - Testing: `Vitest@5`
@@ -38,7 +38,7 @@
 If pnpm is not installed, simply run:
 
 ```bash
-npm install -g pnpm@11
+npm install -g pnpm@12
 ```
 
 Then, install the dependencies:

@@ -4,4 +4,7 @@ allowBuilds:
   lmdb: true
   msgpackr-extract: true
 minimumReleaseAge: 4320 # 3 days
+minimumReleaseAgeExclude:
+  # Angular ships patches every few days; the framework scope is trusted.
+  - "@angular/*"
 blockExoticSubdeps: true
