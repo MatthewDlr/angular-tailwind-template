@@ -25,27 +25,27 @@
     "@angular/platform-server": "^22.2.5",
     "@angular/router": "^22.2.5",
     "@angular/ssr": "^22.2.6",
-    "express": "^5.2.1",
+    "express": "^5.3.0",
     "rxjs": "~7.8.2",
-    "tslib": "^2.8.1"
+    "tslib": "^2.9.1"
   },
   "devDependencies": {
     "@angular/build": "^22.2.6",
     "@angular/cli": "^22.2.6",
     "@angular/compiler-cli": "^22.2.5",
     "@tailwindcss/forms": "^0.5.11",
-    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/postcss": "^4.3.5",
     "@types/express": "^5.0.6",
-    "@types/node": "^24.12.4",
-    "@vitest/eslint-plugin": "^1.6.17",
+    "@types/node": "^24.19.2",
+    "@vitest/eslint-plugin": "^1.6.28",
     "eslint-plugin-promise": "^7.3.0",
     "jsdom": "^27.4.0",
     "oxfmt": "^0.16.0",
-    "oxlint": "^1.64.0",
+    "oxlint": "^1.92.0",
     "oxlint-tsgolint": "^0.10.1",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.3.0",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.5",
     "typescript": "~6.0.3",
-    "vitest": "^4.1.6"
+    "vitest": "^4.1.12"
   }
 }
