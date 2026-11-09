@@ -12,7 +12,7 @@ const browserDistFolder = join(import.meta.dirname, "../browser");
 const app = express();
 const angularApp = new AngularNodeAppEngine({
   // TODO: This is a security-sensitive option. Remove if not needed. For more information, see https://angular.dev/best-practices/security#configuring-trusted-proxy-headers
-  trustProxyHeaders: ['x-forwarded-host', 'x-forwarded-proto'],
+  trustProxyHeaders: ["x-forwarded-host", "x-forwarded-proto"],
 });
 const DEFAULT_PORT = 4000;
 
@@ -42,11 +42,17 @@ app.use(
 /**
  * Handle all other requests by rendering the Angular application.
  */
-app.use((req, res, next) => {
-  angularApp
-    .handle(req)
-    .then(response => (response ? writeResponseToNodeResponse(response, res) : next()))
-    .catch(next);
+app.use(async (req, res, next) => {
+  try {
+    const response = await angularApp.handle(req);
+    if (response) {
+      await writeResponseToNodeResponse(response, res);
+      return;
+    }
+    next();
+  } catch (error) {
+    next(error);
+  }
 });
 
 /**
