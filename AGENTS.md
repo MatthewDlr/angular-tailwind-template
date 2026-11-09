@@ -121,6 +121,7 @@ For writing advanced types, gather all best practices and coding guidelines, loa
 - Do NOT set `standalone: true` inside Angular decorators; it is the default in Angular v20+.
 - Use signals for state management. Use `computed()` for derived state. Do NOT use `mutate` on signals, use `update` or `set`.
 - Use `input()` and `output()` functions instead of decorators.
+- Prefer Signal Forms (`@angular/forms/signals`) for new forms. Use Reactive forms for existing code and Template-driven forms only for trivial cases.
 - Set `changeDetection: ChangeDetectionStrategy.OnPush` in the `@Component` decorator. The CLI schematics already do it.
 - Use `inject()` instead of constructor injection.
 - Use the `host` object of `@Component` / `@Directive` instead of `@HostBinding` and `@HostListener`.
@@ -132,12 +133,17 @@ For writing advanced types, gather all best practices and coding guidelines, loa
 
 - Keep templates simple and avoid complex logic.
 - Use native control flow (`@if`, `@for`, `@switch`) instead of `*ngIf`, `*ngFor`, `*ngSwitch`.
-- Use the async pipe to handle observables.
+- Prefer signals. Convert observables with `toSignal` and fetch async data with `resource()` or `httpResource()` instead of manual subscriptions.
 - Do not assume globals like `new Date()` are available.
 - Do not write arrow functions in templates (they are not supported).
 - Do NOT use `ngClass`, use `class` bindings instead.
 - Do NOT use `ngStyle`, use `style` bindings instead.
 - When using external templates/styles, use paths relative to the component TS file.
+
+### Accessibility
+
+- It MUST pass all AXE checks.
+- It MUST follow all WCAG AA minimums, including focus management, color contrast, and ARIA attributes.
 
 ### TailwindCSS V4
 
