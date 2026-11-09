@@ -1,21 +1,26 @@
 {
   "name": "app-name",
   "version": "0.0.0",
-  "packageManager": "pnpm@11.1.1",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "ng": "ng",
-    "dev": "ng serve",
     "build": "ng build",
     "build:staging": "ng build --configuration staging",
-    "watch": "ng build --watch --configuration development",
+    "check": "pnpm fmt:check && pnpm lint:agent && pnpm test:agent",
+    "dev": "ng serve",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:agent": "oxlint --deny-warnings --format=agent",
+    "lint:ci": "oxlint --quiet",
+    "lint:fix": "oxlint --fix --fix-suggestions",
+    "ng": "ng",
+    "serve:ssr:app-name": "node dist/app-name/server/server.mjs",
     "test": "ng test",
-    "lint": "oxlint --type-aware --type-check",
-    "lint:fix": "oxlint --type-aware --type-check --fix",
-    "format": "oxfmt",
-    "format:check": "oxfmt --check",
-    "serve:ssr:app-name": "node dist/app-name/server/server.mjs"
+    "test:agent": "ng test --no-watch --reporters=agent",
+    "test:ui": "ng test --ui",
+    "watch": "ng build --watch --configuration development"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^22.2.5",
     "@angular/compiler": "^22.2.5",
@@ -34,18 +39,21 @@
     "@angular/cli": "^22.2.6",
     "@angular/compiler-cli": "^22.2.5",
     "@tailwindcss/forms": "^0.5.11",
-    "@tailwindcss/postcss": "^4.3.5",
+    "@tailwindcss/postcss": "4.3.4",
     "@types/express": "^5.0.6",
     "@types/node": "^24.19.2",
-    "@vitest/eslint-plugin": "^1.6.28",
-    "eslint-plugin-promise": "^7.3.0",
+    "@vitest/ui": "^5.1.0",
     "jsdom": "^27.4.0",
-    "oxfmt": "^0.16.0",
-    "oxlint": "^1.92.0",
-    "oxlint-tsgolint": "^0.10.1",
+    "oxfmt": "~0.76.0",
+    "oxlint": "~1.91.0",
+    "oxlint-tsgolint": "~7.0.2005",
     "postcss": "^8.5.32",
-    "tailwindcss": "^4.3.5",
+    "tailwindcss": "4.3.4",
     "typescript": "~6.0.3",
-    "vitest": "^4.1.12"
-  }
+    "vitest": "^5.1.0"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "packageManager": "pnpm@11.1.1"
 }

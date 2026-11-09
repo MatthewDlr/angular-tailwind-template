@@ -1,8 +1,7 @@
 allowBuilds:
-  '@parcel/watcher': true
+  "@parcel/watcher": true
   esbuild: true
   lmdb: true
   msgpackr-extract: true
-onlyBuiltDependencies:
-  - esbuild
-  - lint
+minimumReleaseAge: 4320 # 3 days
+blockExoticSubdeps: true
