@@ -5,25 +5,30 @@
 
 ## Stack
 
-- Node : `24.x`
-- Package Manager: `pnpm@11`
-- Framework: `Angular@21 with zoneless, ssr, and hmr enabled`
-- Styling: `TailwindCSS@4.1`
+- Node: `24.x`
+- Package Manager: `pnpm@12`
+- Framework: `Angular@22 with zoneless, SSR, and HMR enabled`
+- Styling: `TailwindCSS@4`
+- Testing: `Vitest@5`
 - Linter: `Oxlint`
-- Formatter: `Oxfmt`,
+- Formatter: `Oxfmt`
 
 ## Features
 
-- [x] Angular Core v21
+- [x] Angular Core v22
 - [x] Angular [Zoneless enabled](https://angular.dev/guide/zoneless), with `OnPush` detection strategy by default
 - [x] Angular [SSR enabled](https://angular.dev/guide/ssr) with [Incremental Hydration](https://angular.dev/guide/incremental-hydration)
 - [x] Angular [HMR enabled](https://angular.dev/tools/cli/build-system-migration#hot-module-replacement)
-- [x] TailwindCSS 4.1 with pre-configured styles (typography, colors, motions)
-- [x] [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) to lint code almost 100x faster than Eslint with [Type-Aware Linting](https://oxc.rs/docs/guide/usage/linter/type-aware.html)
-- [x] [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) to format code 30× faster than Prettier (Prettier extension might be needed to format .html files)
+- [x] TailwindCSS 4 with pre-configured styles (typography, colors, motions)
+- [x] Strict TypeScript with `noUncheckedIndexedAccess` and `verbatimModuleSyntax`
+- [x] [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) with [Type-Aware Linting](https://oxc.rs/docs/guide/usage/linter/type-aware.html)
+- [x] [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) with import sorting, package.json sorting and Tailwind class sorting
+- [x] [Vitest 5](https://vitest.dev/) as the unit test runner, with coverage
+- [x] Angular Aria and CDK for accessible UI primitives
+- [x] CI workflow running format, lint, test and build
 - [x] Satoshi variable font as default font
-- [x] VSCode recommended extensions
-- [x] GenAI ready with `Agent.md` file along with `.claude`, `.cursor` and `.gemini` folders for prompt storage
+- [x] VSCode recommended extensions and debug configuration
+- [x] GenAI ready with an `AGENTS.md` file and machine-friendly scripts
 
 # Dev
 
@@ -36,7 +41,7 @@
 If pnpm is not installed, simply run:
 
 ```bash
-npm install -g pnpm@10.24.0
+npm install -g pnpm@12
 ```
 
 Then, install the dependencies:
@@ -50,12 +55,6 @@ pnpm install
 To start a local development server, run:
 
 ```bash
-ng serve
-```
-
-or
-
-```bash
 pnpm dev
 ```
 
@@ -66,13 +65,13 @@ Once the server is running, open your browser and navigate to `http://localhost:
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
 ```bash
-ng generate component component-name
+pnpm ng generate component component-name
 ```
 
 For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
 ```bash
-ng generate --help
+pnpm ng generate --help
 ```
 
 ## Linting
@@ -80,7 +79,13 @@ ng generate --help
 To lint your code using Oxlint, run:
 
 ```bash
-pnpm lint 
+pnpm lint
+```
+
+To fix the issues Oxlint can fix automatically, run:
+
+```bash
+pnpm lint:fix
 ```
 
 > [!WARNING]
@@ -91,7 +96,13 @@ pnpm lint
 To format your code using Oxfmt, run:
 
 ```bash
-pnpm format
+pnpm fmt
+```
+
+To check formatting without rewriting files (useful in CI), run:
+
+```bash
+pnpm fmt:check
 ```
 
 ## Building
@@ -99,7 +110,7 @@ pnpm format
 To build the project run:
 
 ```bash
-ng build
+pnpm build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
@@ -109,19 +120,48 @@ This will compile your project and store the build artifacts in the `dist/` dire
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
 ```bash
-ng test
+pnpm test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+To run the suite once and get machine-readable output, run:
 
 ```bash
-ng e2e
+pnpm test:agent
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+To run the suite with coverage, run:
+
+```bash
+pnpm test:coverage
+```
+
+## Agentic Development
+
+Every check has a non-interactive, machine-friendly entry point, so an agent does not have to parse a watch UI or a human report:
+
+- **`AGENTS.md`** defines the loop: plan the component tree and decide what renders on the server, implement in small steps while running the checks, then test the finished feature. It also lists the conventions the linter enforces and where each kind of file belongs.
+- **`pnpm lint:agent`** runs Oxlint with the `agent` reporter and fails on warnings. Oxlint runs with type checking.
+- **`pnpm test:agent`** runs Vitest once with the `agent` reporter, built for machine consumption rather than the interactive UI.
+- **`pnpm fmt:check`** is the non-interactive formatting check for agents that should not rewrite files.
+
+## Continuous integration
+
+`.github/workflows/ci.yml` runs on every pull request targeting `main` and every push to `main`:
+
+1. `pnpm install --frozen-lockfile`
+2. `pnpm fmt:check`
+3. `pnpm lint:ci`
+4. `pnpm test:agent`
+5. `pnpm build`
+
+The job is named `Format, lint, test and build`. Make it required in Settings → Branches (or Rulesets) so a pull request cannot merge while it is red.
 
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+For Tailwind CSS, visit the [Tailwind CSS documentation](https://tailwindcss.com/docs).
+
+## License
+
+MIT. See [LICENSE](LICENSE).

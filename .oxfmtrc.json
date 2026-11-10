@@ -1,11 +1,41 @@
 {
-  "singleQuote": false,
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
   "printWidth": 100,
-  "semi": true,
-  "trailingComma": "all",
-  "arrowParens": "avoid",
   "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": false,
   "bracketSpacing": true,
+  "arrowParens": "avoid",
   "bracketSameLine": false,
-  "endOfLine": "lf"
+  "trailingComma": "all",
+  "endOfLine": "lf",
+  "associations": [
+    {
+      "files": ["src/**/*.html"],
+      "excludeFiles": ["src/index.html"],
+      "language": "angular-html"
+    }
+  ],
+  "ignorePatterns": ["node_modules", "dist", "out-tsc", ".angular", "coverage", ".env*.local"],
+  "sortImports": {
+    "groups": [
+      "type-import",
+      ["value-builtin", "value-external"],
+      "type-internal",
+      "value-internal",
+      ["type-parent", "type-sibling", "type-index"],
+      ["value-parent", "value-sibling", "value-index"],
+      "unknown"
+    ]
+  },
+  "newlinesBetween": true,
+  "sortPackageJson": {
+    "sortScripts": true
+  },
+  "sortTailwindcss": {
+    "stylesheet": "./src/styles.css",
+    "attributes": ["class"],
+    "preserveWhitespace": true
+  }
 }

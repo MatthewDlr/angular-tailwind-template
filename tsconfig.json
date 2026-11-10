@@ -1,19 +1,39 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
+    /* Base options */
+    "target": "ES2022", // ECMAScript target version supported by Angular's browser baseline
+    "module": "preserve", // Let the Angular build decide the final module format
+    "moduleResolution": "bundler",
+    "moduleDetection": "force", // Forces TypeScript to consider all files as modules
+
+    /* Strictness */
     "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "strictNullChecks": true, // Prevent accessing a variable that may be null or undefined
+    "noImplicitAny": true, // Issue an error whenever a variable is inferred as any
+    "noUncheckedIndexedAccess": true, // Prevents from accessing an array or object without first checking if it's defined
+    "noImplicitOverride": true, // Makes the override keyword actually useful in classes
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
-    "isolatedModules": true,
+    "noPropertyAccessFromIndexSignature": true,
+
+    /* Module interop */
+    "esModuleInterop": true, // Helps mend a few of the fences between CommonJS and ES Modules
+    "isolatedModules": true, // Prevents a few TS features which are unsafe when treating files as isolated files
+    "verbatimModuleSyntax": true, // Forces to use import type and export type, leading to more predictable behavior
+    "resolveJsonModule": true, // Allows importing JSON files as modules
+
+    /* Angular */
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "preserve"
+    "skipLibCheck": true, // Skips checking the types of .d.ts files
+
+    /* Path aliases */
+    "paths": {
+      "@/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
+      "@environments/*": ["./src/environments/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

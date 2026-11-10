@@ -8,6 +8,7 @@
     "csstools.postcss",
     "yoavbls.pretty-ts-errors",
     "tomwhite007.rename-angular-component",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "vitest.explorer"
   ]
 }
